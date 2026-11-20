@@ -1,0 +1,54 @@
+--- a/paper/refs.bib
++++ b/paper/refs.bib
+@@ -103,6 +103,20 @@
+   howpublished = {Zenodo, \url{https://doi.org/10.5281/zenodo.24384373}}
+ }
+ 
++@misc{limits,
++  author       = {Rens, Davis},
++  title        = {Limits of defect-insertion bounds for slow-phonon pair order in the {Holstein} model},
++  year         = {2026},
++  howpublished = {Zenodo, \url{https://doi.org/10.5281/zenodo.24385569}}
++}
++
++@misc{exthol,
++  author       = {Rens, Davis},
++  title        = {A frequency-uniform pair bound for a multi-mode {Holstein}-{Hubbard} model},
++  year         = {2026},
++  howpublished = {Zenodo, \url{https://doi.org/10.5281/zenodo.24384461}}
++}
++
+ @article{mcmillan,
+   author  = {McMillan, W. L.},
+   title   = {Transition Temperature of Strong-Coupled Superconductors},
+--- a/paper/main.tex
++++ b/paper/main.tex
+@@ -15,10 +15,15 @@
+ \newcommand{\Tlin}{T_{\mathrm{lin}}}
+ \newcommand{\taui}{\tau_*}
+ \newcommand{\DOI}[1]{\href{https://doi.org/#1}{#1}}
++\newcommand*{\CAPSTONEDOI}{10.5281/zenodo.24406996}
++\newcommand*{\CAPSTONEREPO}{https://github.com/SuperMatics-Inc/phonon-pairing-ceiling-map}
+ 
+ \title{Rigorous ceilings on phonon-mediated pairing:\\ a map from Eliashberg theory to the Holstein model}
+ \author{Davis Rens\\SuperMatics Inc.\\\href{https://orcid.org/0000-0001-5839-5197}{ORCID 0000-0001-5839-5197}}
+-\date{19 November 2026}
++\date{\parbox{.98\linewidth}{\centering\scriptsize
++20 November 2026\qquad Article DOI: \href{https://doi.org/10.5281/zenodo.24406996}{\CAPSTONEDOI}\\
++Source repository: \expandafter\url\expandafter{\CAPSTONEREPO}
++}}
+ 
+ \begin{document}
+ \maketitle
+@@ -156,9 +161,9 @@
+ 
+ A separate analysis gives positive imaginary-time estimates and method-specific barriers beyond the two-thirds scale, without resolving the model-level linear target~\cite{linear5}. The two-thirds clustering proof conditions on a static oscillator background while retaining bounded time-dependent histories in the electronic reference. A companion determinant analysis exhibits a six-piece zero-mean history on a four-site $K_{1,3}$ star that drives the single-spin determinant through zero with dimensionless field norm below five at tested values of $\beta t$; the normalized one-spin Green function is singular there. For~\mbox{$\beta t\geq40$}, uniform invertibility within this family requires a sup-norm cutoff $\kappa<5$, while its free-law Peierls-weight estimate requires $\tau^3\gtrsim U\Omega^2/(12\kappa^2)$, retaining the two-thirds scale. This restriction applies to the specified cutoff family and does not exclude other per-history estimates or a linear model-level bound~\cite{barriers}.
+ 
+-A complementary gap-conditioned theorem assumes $t\leq g/64$ and $2^{10}\sqrt{U/g}\,\Omega\leq\tau\leq g$. Under conditioning that all static fields are $g$-gapped, it gives exponential clustering for fixed-support monomials of opposite nonzero even charge. The companion analysis leaves open the Gibbs weight of near-Fermi-level static fields and the corresponding uniform buffer estimate~\cite{barriers}. Neither route presently supplies a uniform linear ceiling for the full Holstein Gibbs state. These are limits of specified proof strategies, not a no-go theorem for the model.
++A complementary gap-conditioned theorem assumes $t\leq g/64$ and $2^{10}\sqrt{U/g}\,\Omega\leq\tau\leq g$. Under conditioning that all static fields are $g$-gapped, it gives exponential clustering for fixed-support monomials of opposite nonzero even charge. The companion analysis leaves open the Gibbs weight of near-Fermi-level static fields and the corresponding uniform buffer estimate~\cite{barriers}. A third restricted route bounds annealed defect-insertion traces by $\exp(-\lambda|B|/48)$ under $g\leq U/4$, $t\leq g/64$ and $\lambda=\beta U\geq64$, but its insertion estimate supplies no polymer activity or clustering, and its admissible temperature window yields no pair-temperature consequence~\cite{limits}. None of these routes presently supplies a uniform linear ceiling for the full Holstein Gibbs state. These are limits of specified proof strategies, not a no-go theorem for the model.
+ 
+-Other released Zenodo records treat bounded-energy Eliashberg densities, eta pairing, a gamma-model replay certificate, continuum and dot Yukawa-SYK saddles, slow phonons, and cylinder bond-phonon pairing~\cite{finiteband,etapair,gamma,yukawacont,slowphonon,linear3,yukawadot}; these distinct settings do not supply a square-lattice Holstein ceiling in the low-frequency strip. A companion preprint treats the strong-coupling Hubbard--Holstein model with on-site repulsion~\cite{hubhol}.
++Other released Zenodo records treat bounded-energy Eliashberg densities, eta pairing, a gamma-model replay certificate, continuum and dot Yukawa-SYK saddles, slow phonons, and cylinder bond-phonon pairing~\cite{finiteband,etapair,gamma,yukawacont,slowphonon,linear3,yukawadot}; these distinct settings do not supply a square-lattice Holstein ceiling in the low-frequency strip. A companion preprint treats the strong-coupling Hubbard--Holstein model with on-site repulsion~\cite{hubhol}, and a multi-mode version gives the same correlation constants and the same pair-temperature ceiling with $u=\sum_r F_r^2/K_r$ and $U_{\mathrm{eff}}=u-U_c$ in place of $U$~\cite{exthol}.
+ 
+ \section{The linear step}
+ 

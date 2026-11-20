@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the preprint."
+title: "Rigorous ceilings on phonon-mediated pairing: a map from Eliashberg theory to the Holstein model"
+type: article
+authors:
+  - family-names: Rens
+    given-names: Davis
+    affiliation: SuperMatics Inc.
+    orcid: "https://orcid.org/0000-0001-5839-5197"
+doi: "10.5281/zenodo.24406996"
+date-released: 2026-11-20
+license: CC-BY-4.0
+repository-code: "https://github.com/SuperMatics-Inc/phonon-pairing-ceiling-map"
